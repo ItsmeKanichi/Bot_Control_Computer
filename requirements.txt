@@ -1,0 +1,31 @@
+# =============================================
+# Bot Control Computer — Requirements
+# =============================================
+# Không cần cài tay, run.py sẽ tự xử lý.
+# Nếu muốn cài tay: pip install -r requirements.txt
+
+# --- Core ---
+python-dotenv>=1.0.0
+pyautogui>=0.9.54
+Pillow>=10.0.0
+numpy>=1.24.0
+opencv-python>=4.8.0
+comtypes>=1.2.0
+pynput>=1.7.6
+
+# --- Telegram Bot ---
+python-telegram-bot>=20.0
+
+# --- Discord Bot ---
+discord.py>=2.3.0
+
+# --- Browser Automation ---
+playwright>=1.40.0
+pytest-playwright>=0.5.0
+
+# --- Virtual Touchpad (Flask + Ngrok) ---
+flask>=3.0.0
+pyngrok>=7.0.0
+
+# --- Audio Control (Windows only) ---
+pycaw>=20230407

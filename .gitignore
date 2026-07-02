@@ -1,0 +1,44 @@
+# ==============================================
+# Bot Control Computer — .gitignore
+# ==============================================
+
+# --- Môi trường ảo Python ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Biến môi trường / bí mật ---
+.env
+*.env
+!.env.example
+
+# --- Python cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+
+# --- Pytest / Testing ---
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.log
+
+# --- Ngrok ---
+ngrok.exe
+ngrok
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.suo
+*.user
+
+# --- Windows ---
+Thumbs.db
+desktop.ini
+ehthumbs.db
