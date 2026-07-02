@@ -44,7 +44,7 @@
 ## 📁 Cấu trúc Project
 
 ```
-Control_Computer/
+Bot_Control_Computer/
 │
 ├── ⚡ start.bat                       ← 🚀 Click đúp để chạy nhanh (Windows)
 ├── 📄 run.py                          ← Launcher tự động bằng Python
@@ -80,18 +80,21 @@ Control_Computer/
 ### Bước 0 — Cài đặt Python (Nếu chưa có)
 
 Nếu máy tính của bạn chưa có Python hoặc phiên bản cũ hơn `3.10`:
+
 1. Truy cập [python.org/downloads](https://www.python.org/downloads/) và tải bộ cài đặt Python mới nhất cho hệ điều hành của bạn.
 2. Mở trình cài đặt vừa tải về.
-3. > [!IMPORTANT]
-   > Bạn **bắt buộc** phải tích chọn ô **"Add python.exe to PATH"** (hoặc **"Add Python to PATH"**) ở màn hình cài đặt đầu tiên trước khi bấm **Install Now**.
+3. Tích chọn ô **"Add python.exe to PATH"** (hoặc **"Add Python to PATH"**) ở màn hình cài đặt đầu tiên.
+
+> ⚠️ **QUAN TRỌNG:** Bước chọn **"Add python.exe to PATH"** là **bắt buộc**. Nếu bỏ qua bước này, hệ thống sẽ không nhận diện được lệnh `python` từ Command Prompt / PowerShell ở các bước sau.
+
 4. Chọn **Install Now** và hoàn tất quá trình cài đặt.
-5. Kiểm tra bằng cách mở CMD/PowerShell và chạy lệnh: `python --version`.
+5. Kiểm tra cài đặt thành công bằng cách mở CMD/PowerShell và chạy lệnh: `python --version`.
 
 ### Bước 1 — Clone repository
 
 ```bash
-git clone https://github.com/ItsmeKanichi/Control_Computer.git
-cd Control_Computer
+git clone https://github.com/ItsmeKanichi/Bot_Control_Computer.git
+cd Bot_Control_Computer
 ```
 
 ### Bước 2 — Tạo file `.env`
@@ -119,7 +122,8 @@ DISCORD_ALLOWED_USERS=YOUR_DISCORD_USER_ID
 NGROK_AUTH_TOKEN=YOUR_NGROK_AUTH_TOKEN
 ```
 
-> [!NOTE]
+> ℹ️ **LƯU Ý:**
+>
 > **Telegram:** Lấy `TOKEN` từ [@BotFather](https://t.me/BotFather) · Lấy User ID từ [@userinfobot](https://t.me/userinfobot)
 >
 > **Discord:** Tạo bot tại [discord.com/developers](https://discord.com/developers/applications) → **Bot** → bật **MESSAGE CONTENT INTENT** → copy token vào `DISCORD_TOKEN`. Lấy User ID: bật **Developer Mode** trong Discord → chuột phải tên mình → **Copy User ID**
@@ -153,8 +157,7 @@ NGROK_AUTH_TOKEN=YOUR_NGROK_AUTH_TOKEN
   ──────────────────────────────────────────
 ```
 
-> [!TIP]
-> Từ lần thứ hai trở đi `run.py` khởi động gần như ngay lập tức vì bỏ qua bước cài đặt (trừ khi `requirements.txt` có thay đổi).
+> 💡 **MẸO:** Từ lần thứ hai trở đi `run.py` khởi động gần như ngay lập tức vì bỏ qua bước cài đặt (trừ khi `requirements.txt` có thay đổi).
 
 <details>
 <summary>⚙️ Chạy thủ công (không dùng run.py)</summary>
@@ -216,8 +219,7 @@ python Bot_Discord.py           # Discord
 | `/downloadfile [path]` | Gửi file từ máy tính về chat |
 | `/deletefile [path]` | Xóa file trên máy tính |
 
-> [!CAUTION]
-> Giới hạn file: **Telegram** → 50 MB · **Discord** → 25 MB (server thường)
+> ⚠️ **LƯU Ý VỀ GIỚI HẠN TỆP:** Giới hạn file: **Telegram** → 50 MB · **Discord** → 25 MB (server thường)
 
 ### 🖥️ Thông tin hệ thống
 
